@@ -17,7 +17,8 @@
 			
 			Cookie cookie = new Cookie("memberId",mid);
 			Cookie cookie2 = new Cookie("memberPw",mpw);
-		
+			cookie.setMaxAge(3600); // 쿠키 유효시간 (second)
+			
 			response.addCookie(cookie);
 			response.addCookie(cookie2);
 			response.sendRedirect("welcome.jsp");
